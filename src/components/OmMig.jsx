@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css';
 import '../ommig.css';
-import image from '../assets/images/kold.jpg';
+import image from '../assets/images/andersflaeng.png';
 import image10 from '../assets/images/andersflaeng.webp'
 import image11 from '../assets/images/html.svg';
 import image4 from '../assets/images/css.svg';
