@@ -1,0 +1,135 @@
+.footer {
+    background-color: #E0F7FA;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    color: #001f3f;
+    font-family: 'Montserrat', sans-serif;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #001f3f;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-navbar {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer-navbar h4 {
+    margin-bottom: 10px;
+}
+
+.footer-navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-navbar ul li {
+    margin: 10px 0;
+}
+
+.footer-navbar ul li a {
+    color: #001f3f;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.footer-navbar ul li a:hover {
+    font-size: 18px;
+}
+
+.sociale-ikoner {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+.sociale-ikoner i {
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #E0F7FA;
+    color: #001f3f;
+    transition: 0.3s ease;
+}
+
+.sociale-ikoner i:hover {
+    transform: scale(1.5);
+}
+
+.footer-logo {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 75px;
+}
+
+.footer h4 {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin: 10px 0;
+    }
+
+    .footer-navbar {
+        margin: 10px 0;
+    }
+
+    .sociale-ikoner {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .footer-logo img {
+        max-width: 50px;
+    }
+}

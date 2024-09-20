@@ -1,0 +1,248 @@
+.projekter-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    position: relative;
+    transition: flex-direction 1s ease-out;
+    padding-bottom: 200px;
+}
+
+.projekter-part1, .projekter-part2 {
+    font-size: 9.375rem;
+    font-weight: bold;
+    color: #001F3F;
+    font-family: "Six Caps", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.projekter-part1 {
+    opacity: 0;
+}
+
+.projekter-part2 {
+    opacity: 1;
+}
+
+.projekter-heading.animate {
+    flex-direction: row;
+}
+
+.projekter-part1.animate {
+    opacity: 1;
+    transform: translate(calc(-50% - 150px), -50%);
+}
+
+.projekter-part1.animate ~ .projekter-part2 {
+    transform: translate(100px, -50%);
+}
+
+.projekter-overskrift {
+    font-weight: bold;
+    color: #001F3F;
+    margin: 0;
+    font-family: "Six Caps", sans-serif;
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    opacity: 1;
+}
+
+#projekter {
+    scroll-margin-top: 80px;
+    padding-top: 50px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 100px 0;
+    padding-bottom: 200px;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 50%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    border: 2px solid #ADD8E6;
+    border-radius: 50px;
+    padding: 10px;
+    background-color: #001F3F;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.from-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.from-right {
+    animation: slideInFromRight 1s ease-out;
+}
+
+.image-container.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInFromLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.projekterh3 {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    color: #001F3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projekterp {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    color: #001F3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.handball-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text-and-handball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.handball-container {
+    display: flex;
+    justify-content: center;
+}
+
+.projekterp {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media screen and (min-width: 426px) and (max-width: 1024px) {
+    .projekter-part1, .projekter-part2 {
+        font-size: 4.063rem;
+    }
+
+    .projekter-part1.animate {
+        opacity: 1;
+        transform: translate(calc(-50% - 4.375rem), -50%);
+    }
+    
+    .projekter-part1.animate ~ .projekter-part2 {
+        transform: translate(2.5rem, -50%);
+    }
+}
+
+@media (max-width: 425px) {
+    .projekter-part1, .projekter-part2 {
+        font-size: 3.500rem;
+    }
+
+    .projekter-part1.animate {
+        opacity: 1;
+        transform: translate(calc(-50% - 4rem), -50%);
+    }
+    
+    .projekter-part1.animate ~ .projekter-part2 {
+        transform: translate(2rem, -50%);
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .image-section {
+        gap: 100px;
+        padding: 0;
+    }
+
+    .handball-section {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .projekterh3 {
+        font-size: 20px;
+    }
+
+    .projekterp {
+        font-size: 18px;
+    }
+}

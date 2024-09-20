@@ -1,0 +1,29 @@
+.arrow-container {
+    position: absolute;
+    top: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 10; 
+  }
+  
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .arrow-line {
+    width: 2px;
+    height: 40px;
+    background-color: black; 
+  }
+  
+  .arrow-head {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+  }
+  
