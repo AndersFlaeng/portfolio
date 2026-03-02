@@ -1,141 +1,71 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../index.css';
 import '../ommig.css';
 import image from '../assets/images/andersflaeng1.webp';
-import image10 from '../assets/images/andersflaeng.webp'
-import image11 from '../assets/images/html.svg';
-import image4 from '../assets/images/css.svg';
-import image9 from '../assets/images/js.svg';
-import image8 from '../assets/images/react.svg';
-import image7 from '../assets/images/ps.svg';
-import image3 from '../assets/images/ai.svg';
-import image5 from '../assets/images/github.svg';
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiMongodb,
+  SiSupabase,
+  SiTailwindcss,
+  SiGithub,
+} from 'react-icons/si';
 
 const OmMig = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [animationClass, setAnimationClass] = useState('');
-  const [hasBeenInView, setHasBeenInView] = useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
-  const handleExpand = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const element = document.querySelector('.intro-box');
-      const ommigSection = document.querySelector('#om-mig');
-      if (element && ommigSection) {
-        const rect = ommigSection.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          if (!hasBeenInView) {
-            setAnimationClass('fade-in');
-            setHasBeenInView(true);
-            setTimeout(() => {
-              setAnimationClass('fade-out');
-            }, 1000);
-          }
-        } else {
-          setHasBeenInView(false);
-          setAnimationClass('');
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [hasBeenInView]);
+  const technologies = [
+    { Icon: SiHtml5, label: 'HTML5', color: '#E34F26' },
+    { Icon: SiCss3, label: 'CSS', color: '#1572B6' },
+    { Icon: SiJavascript, label: 'JavaScript', color: '#F7DF1E' },
+    { Icon: SiTypescript, label: 'TypeScript', color: '#3178C6' },
+    { Icon: SiReact, label: 'React', color: '#61DAFB' },
+    { Icon: SiNextdotjs, label: 'Next.js', color: '#111111' },
+    { Icon: SiNodedotjs, label: 'Node.js', color: '#5FA04E' },
+    { Icon: SiMongodb, label: 'MongoDB', color: '#47A248' },
+    { Icon: SiSupabase, label: 'Supabase', color: '#3ECF8E' },
+    { Icon: SiTailwindcss, label: 'Tailwind CSS', color: '#06B6D4' },
+    { Icon: SiGithub, label: 'GitHub', color: '#181717' },
+  ];
 
   return (
-    <div className="page-container">
-      {}
-      <div className={`intro-box ${animationClass}`}>
-        <p>Tryk her for at lære mere om mig</p>
+    <section className="om-section">
+      <div className="om-section-header">
+        <h1>Om mig</h1>
       </div>
 
-      <div className={`ommig-container ${isFlipped ? 'flipped' : ''}`}>
-        <button className="flip-button" onClick={handleFlip}>
-          ↻
-        </button>
-
-        <div className="ommig-content">
-    <img src={image} alt="Billede af mig" className="ommig-image" />
-    <div className="ommig-text-content">
-    <h1>Multimediedesigner med smag for kodning</h1>
-    <p>Hej, mit navn er Anders, og jeg er en multimediedesigner med en stor passion for kodning og digitale løsninger. Med forcer i HTML, CSS, JavaScript og React.</p>
-    <p>Jeg elsker at bringe idéer til livs gennem kodning og sikre et responsivt design, så alle kan være med, uanset skærmstørrelse.</p>
-      <h2 className="ommig-subheading">Personlige kompetencer</h2>
-      <ul className="ommig-competencies">
-        <li>Hjælpsom</li>
-        <li>Arbejdsom</li>
-        <li>Læringsparat</li>
-        <li>Ansvarsbevidst</li>
-      </ul>
-      <ul className="ommig-competencies1">
-        <li>Løsningsorienteret</li>
-        <li>Teamplayer</li>
-        <li>Smilende</li>
-        <li>Selvstændig</li>
-      </ul>
-
-      <h2 className="ommig-subheading">Kompetencer</h2>
-      <div className="google-icons">
-        <div className="icon-item">
-          <img src={image11} alt="html 5" />
-          <p>html 5</p>
+      <div className="om-card om-main-card">
+        <div className="om-media">
+          <img src={image} alt="Billede af Anders" className="om-image" />
+          <div className="om-cta-group">
+            <a href="#kontakt" className="om-cta-btn">Kontakt mig</a>
+            <a href="cv.pdf" className="om-cta-btn om-cta-btn-secondary" target="_blank" rel="noopener noreferrer">Se CV</a>
+          </div>
         </div>
-        <div className="icon-item">
-          <img src={image4} alt="css" />
-          <p>css</p>
-        </div>
-        <div className="icon-item">
-          <img src={image9} alt="Javascript" />
-          <p>Javascript</p>
-        </div>
-        <div className="icon-item">
-          <img src={image8} alt="React" />
-          <p>React</p>
-        </div>
-        <div className="icon-item">
-          <img src={image7} alt="Photoshop" />
-          <p>Photoshop</p>
-        </div>
-        <div className="icon-item">
-          <img src={image3} alt="Illustrator" />
-          <p>Illustrator</p>
-        </div>
-        <div className="icon-item">
-          <img src={image5} alt="Github" />
-          <p>Github</p>
+        <div className="om-text-content">
+          <h2>Passion for kode, design og den fulde stack</h2>
+          <p>Hej, jeg hedder Anders. Jeg er uddannet multimediedesigner og studerer nu videre til webudvikler. Jeg brænder for at omsætte idéer til digitale løsninger med fokus på brugervenlighed, performance og responsive oplevelser i HTML, CSS, JavaScript og React.</p>
+          <p>Jeg elsker at bringe idéer til livs gennem kodning og sikre et responsivt design, så alle kan være med, uanset skærmstørrelse.</p>
+          <p>Ved siden af studiet spiller jeg håndbold på højt niveau i Rækker Mølle Håndbold. Det har styrket min evne til samarbejde, disciplin og fokus under pres, og jeg er vant til at planlægge min tid struktureret i forhold til både studie, sport og arbejde.</p>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div className={`ommig-back ${isExpanded ? 'expanded' : ''}`}>
-    <div className="ommig-back-content">
-      <h1>Mere end bare en multimediedesigner</h1>
-      <ul>
-        <li><strong>Alder:</strong> 22 år</li>
-      </ul>
-      <p> Jeg har altid haft en aktiv livsstil og de sidste par år har den stået på håndbold. Hvor jeg ligenu spiller håndbold for 1. divisions klubben Rækker Mølle Håndbold.</p>
-      <p> Håndbolden for mig er ikke kun en hobby, men giver mig derimod også en følelse af teamwork og fællesskab, som man ikke finder mange andre steder. Dette er alt sammen noget som jeg også bringer med ind i mit professionelle liv.</p>
-      <p>Jeg ser mig selv som en udadvendt og omsorgsfuld person, der er vant til at arbejde i teams og tror på vigtigheden af et godt samarbejde.</p>
-      <p>Når jeg ikke er på håndboldbanen, sidder jeg ofte foran computeren eller tilbringer tid med mine venner.</p>
-
-    </div>
-    <img src={image10} alt="Billede af mig" className="ommig-image" />
-  </div>
+      <div className="tech-line" aria-label="Teknologier jeg arbejder med">
+        <div className="tech-line-track">
+          <div className="tech-line-motion">
+            {[...technologies, ...technologies].map((technology, index) => (
+              <div className="tech-line-item" key={`${technology.label}-${index}`}>
+                <technology.Icon className="tech-line-icon" style={{ color: technology.color }} aria-hidden="true" />
+                <span>{technology.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

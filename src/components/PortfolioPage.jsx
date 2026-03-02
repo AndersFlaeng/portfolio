@@ -12,12 +12,14 @@ const PortfolioPage = () => {
 
   return (
     <div className="portfolio-container">
-      <h1 className="portfolio-title">Portfolio</h1>
-      <h2 className="anders-flaeng">Anders Flæng</h2>
-      {}
-      <div className="scroll-down" onClick={scrollToSection}>
-        <div className="arrow"></div>
+      <div className="portfolio-content">
+        <h1 className="portfolio-title">Portfolio</h1>
+        <h2 className="anders-flaeng">Anders Flæng</h2>
       </div>
+
+      <button type="button" className="scroll-down" onClick={scrollToSection} aria-label="Scroll til Om mig sektionen">
+        <span className="scroll-arrow" />
+      </button>
     </div>
   );
 };
