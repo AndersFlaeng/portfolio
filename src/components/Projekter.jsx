@@ -36,7 +36,7 @@ const Projekterpage = () => {
     <section className="projekter-section">
       <div className="projekter-heading">
         <h2>Projekter</h2>
-        <p>Udvalgte responsive projekter</p>
+        <p>Udvalgte responsive projekter fra multimediedesign</p>
       </div>
 
       <div className="projekter-grid">
