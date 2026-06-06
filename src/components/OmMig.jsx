@@ -42,14 +42,14 @@ const OmMig = () => {
           <img src={image} alt="Billede af Anders" className="om-image" />
           <div className="om-cta-group">
             <a href="#kontakt" className="om-cta-btn">Kontakt mig</a>
-            <a href="cv.pdf" className="om-cta-btn om-cta-btn-secondary" target="_blank" rel="noopener noreferrer">Se CV</a>
+            <a href="/CV.pdf" className="om-cta-btn om-cta-btn-secondary" target="_blank" rel="noopener noreferrer">Se CV</a>
           </div>
         </div>
         <div className="om-text-content">
           <h2>Passion for kode, design og den fulde stack</h2>
           <p>Hej, jeg hedder Anders. Jeg er uddannet multimediedesigner og studerer nu videre til webudvikler. Jeg brænder for at omsætte idéer til digitale løsninger med fokus på brugervenlighed, performance og responsive oplevelser i HTML, CSS, JavaScript og React.</p>
           <p>Jeg elsker at bringe idéer til livs gennem kodning og sikre et responsivt design, så alle kan være med, uanset skærmstørrelse.</p>
-          <p>Ved siden af studiet spiller jeg håndbold på højt niveau i Rækker Mølle Håndbold. Det har styrket min evne til samarbejde, disciplin og fokus under pres, og jeg er vant til at planlægge min tid struktureret i forhold til både studie, sport og arbejde.</p>
+          <p>Ved siden af studiet bruger jeg meget tid på håndbold i 1. Divisions klubben Rækker Mølle Håndbold. Det har styrket min evne til samarbejde, disciplin og fokus under pres, og jeg er vant til at planlægge min tid struktureret i forhold til både studie, sport og arbejde.</p>
         </div>
       </div>
 
