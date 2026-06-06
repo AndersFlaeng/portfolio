@@ -42,7 +42,7 @@ const OmMig = () => {
           <img src={image} alt="Billede af Anders" className="om-image" />
           <div className="om-cta-group">
             <a href="#kontakt" className="om-cta-btn">Kontakt mig</a>
-            <a href="CV.pdf" className="om-cta-btn om-cta-btn-secondary" target="_blank" rel="noopener noreferrer">Se CV</a>
+            <a href="/portfolio/CV.pdf" className="om-cta-btn om-cta-btn-secondary" target="_blank" rel="noopener noreferrer">Se CV</a>
           </div>
         </div>
         <div className="om-text-content">
